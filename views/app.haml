@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title PIXELB0SS
+    %script{src: 'http://code.jquery.com/jquery-1.7.1.min.js', type: 'text/javascript'}
+    %script{src: 'app.js', type: 'text/javascript'}
+    %link{href: 'app.css', media: 'screen', rel: 'stylesheet', type: 'text/css'}
+  %body
+    %h1 /USR/BIN/PIXELBOSS
+
+    .canvas
+      %ul.map
+        - rows.each do |columns|
+          - columns.each do |column|
+            %li{class: "color-#{column.ord}"}= column.ord
+
+      %ul.colors
+        - (0..15).each do |color|
+          %li{class: "color-#{color}"}= color

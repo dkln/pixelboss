@@ -1,0 +1,3 @@
+Drawing pixels like a boss:
+  bundle install
+  ruby app.rb
